@@ -1,0 +1,27 @@
+.Navbar {
+   
+   background: rgb(47, 54, 47);
+   margin: 10px;
+   border-radius: 20px;
+   padding: 10px;
+}
+.navbutton{
+    margin-bottom: auto;
+    display: flex;
+    justify-content: end;
+    background: rgb(16, 5, 66);
+}
+.Navbar button{
+    background: pink;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+.celu{
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 20px;
+    background: wheat;
+    margin: 20px;
+}
