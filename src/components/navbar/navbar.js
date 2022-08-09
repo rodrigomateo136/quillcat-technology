@@ -15,7 +15,7 @@ const Navbar = ()=>{
             <Link to='/category/celular' className="button">Celulares</Link>
             </div>  
             <div className='celu'>
-            <Link to='/category/tablet'>Tablet</Link>
+            <Link to='/category/tablet'className="button"  >Tablet</Link>
                 </div>  
                 <div className='celu'>
                 <Link className="button" to='/category/notebook'>Notebook</Link>

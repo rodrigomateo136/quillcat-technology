@@ -10,18 +10,25 @@
     display: flex;
     justify-content: end;
     background: rgb(16, 5, 66);
+    
 }
 .Navbar button{
     background: pink;
     margin: 10px;
     border-radius: 20px;
     padding: 10px;
-
+    
 }
 .celu{
-    border: 2px solid black;
+    border: 2px solid wheat;
     padding: 10px;
     border-radius: 20px;
-    background: wheat;
+    background: black;
     margin: 20px;
+
+    
+}
+.button{
+    text-decoration: none;
+    color: aliceblue;
 }

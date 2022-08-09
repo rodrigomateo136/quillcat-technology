@@ -1,7 +1,18 @@
 .contador{
-    background: rgb(16, 5, 66);
-    margin-top:auto;
+    background: rgb(114, 109, 134);
+    margin-top:10pxs;
+    margin-bottom: 10px;
+    margin-right: 80px;
+    margin-left: 80px;
+    border-radius: 30px;
+    border: 1px solid black;
   }
   .contador h1{
-    color: aliceblue;
+    color: black;
+font-size: 1rem;
+  }
+  .count{
+    border: 2px solid black;
+    border-radius: 20px;
+    margin-bottom: 10px;
   }

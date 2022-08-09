@@ -1,7 +1,7 @@
 const products= [
     {
         id:`1`,
-        name: `iphone 12`,
+        name: `Iphone 12`,
         price: 327000,
         category:`celular`,
         stock: 25,
@@ -15,7 +15,7 @@ const products= [
     },
     {
         id:`2`,
-        name: `tablet philco TP10F`,
+        name: `Tablet philco TP10F`,
         price: 36000,
         category: `tablet`,
         stock: 15, 
