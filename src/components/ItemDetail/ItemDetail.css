@@ -1,3 +1,36 @@
+.detalleMarco{
+    display: block;
+    columns: 500px;
+    border: 2px solid white;
+    border-radius: 25px;
+    background-image: url(../../../public/imagenes/fondoListadp.jpg)
+
+}
 .itemD{
-    color:aliceblue
+    color: rgb(176, 231, 227);
+}
+.cardDetalle{
+   
+margin-top: 200px; 
+}
+.detFont{
+    color:black;
+    font-size: 20px;
+    text-shadow:  0.2em 0.2em 0.8em white;
+}
+.FinCompra{
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: wheat;
+    padding: 2px;
+    color: green;
+}
+.imgCelu2{
+    margin-top: 65px;
+    height: 350px;
+    width: 200px;
+    border: 10px white;
+    border-radius: 25px;
+    
 }

@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   background: rgb(16, 5, 66);
+  
+  border: 2px solid black;
 }
 .section{
   background-image: url(../public/imagenes/fondoAbstracto.webp);
@@ -55,7 +57,9 @@
   display: flex;
   justify-content: space-around;
   background: rgb(8, 7, 8);
-  padding: 50px;
+  padding: 30px;
     color: azure;
-  
+    border: 2px solid white;
+    border-radius: 30px;
+  margin-bottom: 28px;
 }

@@ -2,6 +2,7 @@
 .main2{
     display: block;
    margin: auto;
+   background-image: url(../../../public/imagenes/fondoMain.jpg)
 }
 .main2 h2{
     color: aliceblue;

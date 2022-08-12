@@ -1,14 +1,41 @@
 import './ItemDetail.css';
+import {Link} from 'react-router-dom'
+import Counter from "../counter/counter";
+import {useState} from 'react'
 
+const ItemDetail =({name, descripcion, price, img })=>{
 
+    const [quantity, setQuantify]=useState(0)
+console.log(quantity)
 
-const ItemDetail =({name, descripcion,  })=>{
+  const handleOnAdd =(quantity)=>{
+  console.log(`la cantidad agregada es: ${quantity}` )
+   setQuantify(quantity)
+   
+  }
+
     return(
+        <div className='detalleMarco'>
+
         <>
        
-        <h1 className='itemD'>{name}</h1>
-        <h2 className='itemD' >{descripcion}</h2>
+        <h2 className='itemD'>{name}</h2>
+        <img className="imgCelu2" src={img} alt={""} />
+        <div className='cardDetalle'>
+
+        <h3 className='detFont' >El precio es ={price} </h3>
+        <h5 className='detFont' >{descripcion}</h5>
+        </div>
+        {
+            quantity === 0 ?(
+                <Counter stock={10} onAdd={handleOnAdd}/>
+                
+                ) : (
+                    <Link className="FinCompra" to='cart'>Finalizar Compra</Link>
+                    )
+                }
         </>
+                </div>
     )
 }
 

@@ -20,15 +20,7 @@ console.log(categoryId)
         }).catch(error =>{
             console.log(error)
         })
-        // if(!categoryId){
-        // getProducts().then(products =>{
-        //        setProducts(products)
-        //     })
-        // }else{
-        //     getProductsByCategory(categoryId).then(products =>{
-        //         setProducts(products)
-        //      })
-        //     }
+        
     }, [categoryId])
 
 

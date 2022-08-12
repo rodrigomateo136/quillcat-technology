@@ -1,7 +1,7 @@
 .Navbar {
    
-   background: rgb(47, 54, 47);
-   margin: 10px;
+    background-image: url(../../../public/imagenes/fondoMain.jpg);
+   margin: 3px;
    border-radius: 20px;
    padding: 10px;
 }
@@ -9,26 +9,20 @@
     margin-bottom: auto;
     display: flex;
     justify-content: end;
-    background: rgb(16, 5, 66);
+    background-image: url(../../../public/imagenes/fondoListadp.jpg);
     
 }
-.Navbar button{
-    background: pink;
-    margin: 10px;
-    border-radius: 20px;
-    padding: 10px;
-    
-}
+
 .celu{
-    border: 2px solid wheat;
+    border: 2px solid black;
     padding: 10px;
     border-radius: 20px;
-    background: black;
+    background:navajowhite;
     margin: 20px;
 
     
 }
 .button{
     text-decoration: none;
-    color: aliceblue;
+    color: black;
 }
