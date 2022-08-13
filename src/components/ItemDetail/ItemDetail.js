@@ -1,18 +1,22 @@
 import './ItemDetail.css';
 import {Link} from 'react-router-dom'
 import Counter from "../counter/counter";
-import {useState} from 'react'
+import {useState, useContext} from 'react'
+import { cartContext } from '../../App';
 
-const ItemDetail =({name, descripcion, price, img })=>{
+const ItemDetail =({name, descripcion, price, id, img })=>{
+    let {AddItem} = useContext(cartContext)
 
     const [quantity, setQuantify]=useState(0)
-console.log(quantity)
 
   const handleOnAdd =(quantity)=>{
-  console.log(`la cantidad agregada es: ${quantity}` )
+  console.log(`la cantidad agregada es: ${quantity}`)
    setQuantify(quantity)
-   
-  }
+   const productToAdd={
+    id, name , quantity , price, 
+}
+    AddItem=(productToAdd)
+}
 
     return(
         <div className='detalleMarco'>
