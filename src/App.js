@@ -1,21 +1,17 @@
 
 import './App.css';
 import Navbar from './components/navbar/navbar';
-import {useState, createContext} from 'react'
+
 import Mercadolibre from './components/MercadoLibre/mercadolibre';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { CartContextProvider } from './context/cartContext';
 
-export const cartContext = createContext()
 
 function App() {
 
- const [cart, setCart] = useState([])
-
-  const AddItem= (productToAdd)=>{
-   setCart([...cart, productToAdd])
-  }
+ 
 
   return (
     <div className="App">
@@ -34,7 +30,8 @@ function App() {
       </section>
       <div>
       <main className='main'>
-        <cartContext.Provider value={{cart, AddItem}}>
+        <CartContextProvider>
+
           <BrowserRouter>
             <Navbar></Navbar>
             <Routes>
@@ -43,12 +40,9 @@ function App() {
               <Route path='/detail/:productId' element={<ItemDetailContainer />}/>
             </Routes>
             </BrowserRouter>
-        </cartContext.Provider>
-       
-    
-      
-      
-    </main>
+        </CartContextProvider>
+        
+        </main>
 <footer className='footer'>
 <h3>Quillcat Technology</h3>
 <p>Juramento 1544 CABA</p>
