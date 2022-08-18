@@ -4,20 +4,22 @@ import Counter from "../counter/counter";
 import {useState, useContext} from 'react'
 import CartContext from '../../context/cartContext';
 
-const ItemDetail =({name, descripcion, price, id, img })=>{
-    let {AddItem} = useContext(CartContext)
+const ItemDetail =({name, descripcion, price, id, img, stock})=>{
+    const {AddItem, getProductQuantity} = useContext(CartContext)
 
     const [quantity, setQuantify]=useState(0)
 
   const handleOnAdd =(quantity)=>{
-  console.log(`la cantidad agregada es: ${quantity}`)
+  
    setQuantify(quantity)
    const productToAdd={
     id, name , quantity , price, 
 }
     AddItem(productToAdd)
+ 
 }
-
+ 
+const productQuantity = getProductQuantity(id)
     return(
         <div className='detalleMarco'>
 
@@ -32,10 +34,10 @@ const ItemDetail =({name, descripcion, price, id, img })=>{
         </div>
         {
             quantity === 0 ?(
-                <Counter stock={10} onAdd={handleOnAdd}/>
+                <Counter stock={stock} onAdd={handleOnAdd} initial ={productQuantity}/>
                 
                 ) : (
-                    <Link className="FinCompra" to='cart'>Finalizar Compra</Link>
+                    <Link className="FinCompra" to='../cart'>Finalizar Compra</Link>
                     )
                 }
         </>

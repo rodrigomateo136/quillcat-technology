@@ -1,8 +1,12 @@
 import "./counter.css"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const  Counter =({stock , onAdd})=>{
-    const [count , setCount ]= useState(1)
+const  Counter =({stock=0, initial =1, onAdd})=>{
+    const [count , setCount ]= useState(initial)
+
+    useEffect(()=>{
+        setCount(initial)
+    },[initial])
 
     const increment=()=>{
         if(count < stock) {

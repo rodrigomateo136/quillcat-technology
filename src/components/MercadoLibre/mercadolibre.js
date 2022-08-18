@@ -6,15 +6,7 @@ const Mercadolibre = ()=>{
     const [product, setProducts]= useState([])
     const [input, setInput]=useState("")
     const [cargando, setCargando]=useState(false)
-    // useEffect(()=>{
-        // fetch("https://api.mercadolibre.com/sites/MLA/search?q=celular")
-        // .then(response =>response.json())
-        // .then(json =>{
-                // setProducts(json.results)
-            // })
-        
-
-    // }, [])
+   
 
 const handleOnSubmit= (e)=>{
     e.preventDefault()

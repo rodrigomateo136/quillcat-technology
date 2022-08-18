@@ -6,12 +6,21 @@ import CartContext from '../context/cartContext'
 const Cartwidget=()=>{
     const {getquantity} = useContext(CartContext)
     const quantity = getquantity()
+    
+
+//const {cartUpdated} =useContext(CartContext)
+//console.log(cartUpdated)
+
     return (
-        <div className='carrito'>
-            <Link to='./cart' className='carrito2'>
-            <img  className="carrito3" src='imagenes/carrito.jpg' alt='cartwidget'/>{quantity}
-            </Link>
-        </div>
-    )
-}
-export default Cartwidget
+            <>
+            <div className='carrito'>
+                <Link to='./cart' className='carrito2'>
+                <img  className="carrito3" src='imagenes/carrito.jpg' alt='cartwidget'/>{quantity}
+                </Link>
+    
+            </div>
+            </>
+            )
+        }
+
+export default Cartwidget 

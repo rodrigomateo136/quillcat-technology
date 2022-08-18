@@ -1,12 +1,13 @@
 
 import './App.css';
 import Navbar from './components/navbar/navbar';
-
 import Mercadolibre from './components/MercadoLibre/mercadolibre';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import { CartContextProvider } from './context/cartContext';
+import  { CartContextProvider } from './context/cartContext';
+import Cartwidget from './cartwidget/cartwidget';
+
 
 
 function App() {
@@ -31,15 +32,15 @@ function App() {
       <div>
       <main className='main'>
         <CartContextProvider>
-
           <BrowserRouter>
             <Navbar></Navbar>
             <Routes>
               <Route path='/' element={<ItemListContainer greeting='Listado de productos'/>}/>
               <Route path='/category/:categoryId' element={<ItemListContainer greeting='Filtrado de productos'/>}/>
               <Route path='/detail/:productId' element={<ItemDetailContainer />}/>
+              <Route path='/cart' element={<Cartwidget/>}/>
             </Routes>
-            </BrowserRouter>
+          </BrowserRouter>
         </CartContextProvider>
         
         </main>
