@@ -16,3 +16,14 @@ font-size: 1rem;
     border-radius: 20px;
     margin-bottom: 10px;
   }
+  .prodCart{
+      text-decoration: none;
+      background: white;
+      border-radius: 20px;
+      padding: 10px;
+      border: 2px solid black;
+      color: black;
+    }
+    .merc{
+      color:white;
+    }

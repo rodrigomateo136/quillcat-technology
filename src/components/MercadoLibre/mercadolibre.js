@@ -38,8 +38,8 @@ return(
     {product.map(prod =>{
         return (
             <div key={prod.id}>
-                <p>{prod.title}</p>
-                <p>{prod.price}</p>
+                <p className="merc">{prod.title}</p>
+                <p className="merc"  >Precio=${prod.price}</p>
                 <img src={prod.thumbnail} alt={prod.title} />
             </div>
         )
