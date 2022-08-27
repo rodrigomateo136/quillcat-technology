@@ -3,8 +3,8 @@ import CartContext from '../context/cartContext'
 import { Link } from 'react-router-dom'
 
 function Cart() {
-    const { cart, clearCart, removeItem,  } = useContext(CartContext)
-
+    const { cart, removeItem,  } = useContext(CartContext)
+    const finalSum = cart.reduce((prev, current) => prev + (current.price*current.quantity),0)
     return (
         <div className='main2'>
             {cart.length ?
@@ -15,16 +15,16 @@ function Cart() {
                             <h4 className="tituCard">{item.name}</h4>
                             <p className="price">Cantitada = {item.quantity}</p>
                             <p className="price">Precio = ${item.price * item.quantity}</p>
-                            <button  className="count" onClick ={ () => (clearCart())}>Limpiar Carrito</button>
+                           
                             <button  className="count" onClick ={ () => (removeItem(item.id))}>remover item</button>
                             
-                           
                          
                             
                         </li>
                         )
                    
                     })}
+                    <h2 className='detalleCart'>Total de compra =${finalSum}</h2>
                 </ol>
                 :
                 <>

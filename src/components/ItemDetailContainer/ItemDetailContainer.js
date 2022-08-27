@@ -9,15 +9,14 @@ const ItemDetailContainer = ()=>{
 const [product, setProduct]=useState()
 const [loading , setLoading]=useState(true)
 const {productId}= useParams()
-console.log(product)
+
 useEffect( ()=>{
    
 
- getDoc(doc(baseDato, 'product', productId)).then(response=>{
-    console.log(response)
+ getDoc(doc(baseDato, 'products', productId)).then(response=>{
+
     const data= response.data()
-    const productAdapted= {id: response.id,  ...data}
-    console.log(...data)
+    const productAdapted= {id: response.id,...data}
     setProduct(productAdapted)
 }).catch(error=>{
     console.log(error)
@@ -25,13 +24,13 @@ useEffect( ()=>{
     setLoading(false)
 })
 },[productId])
-//  if(loading){
-//     return <h1>cargando ....</h1>
-//  }
+ if(loading){
+    return <h1>cargando ....</h1>
+ }
     return(
         <div >
             <h2 className="detalle">Detalle</h2>
-         {loading ? <h1>cargando ....</h1> :<ItemDetail {...product}/>}
+         <ItemDetail  {...product}/>
             
         </div>
     )
