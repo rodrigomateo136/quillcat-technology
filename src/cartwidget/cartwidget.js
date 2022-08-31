@@ -17,7 +17,7 @@ const Cartwidget=()=>{
                 </Link>
             </div>
                 <button  className="count" onClick ={ () => (clearCart())}>Limpiar</button>
-           
+         
             </>
             )
         }

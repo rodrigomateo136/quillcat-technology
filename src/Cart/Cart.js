@@ -25,6 +25,7 @@ function Cart() {
                    
                     })}
                     <h2 className='detalleCart'>Total de compra =${finalSum}</h2>
+                    <Link to='/checkout' className='detalleCart'>Checkout</Link>
                 </ol>
                 :
                 <>

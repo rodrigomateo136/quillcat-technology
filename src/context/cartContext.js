@@ -27,7 +27,7 @@ console.log (cart)
    }
 }
 
-
+const finalSum = cart.reduce((prev, current) => prev + (current.price*current.quantity),0)
 
 
 const clearCart = () =>{
@@ -60,7 +60,7 @@ const getProductQuantity =(id) =>{
   return  product?.quantity
 }
   return (
-    <CartContext.Provider value={{cart, AddItem, getquantity, clearCart, isInCart, removeItem, getProductQuantity,   }}>
+    <CartContext.Provider value={{cart, AddItem, getquantity, clearCart, isInCart, removeItem, getProductQuantity, finalSum  }}>
         {children}
     </CartContext.Provider>
   )
