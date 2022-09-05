@@ -16,21 +16,21 @@ function App() {
  
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className='App-logo' >
+    <body className="grid-container">
+      <header className="header">
+        <div >
           <img className='imgLogo' src="imagenes/logo.webp" alt=""/>
         </div>
         <div>
           <h1 className='titulo'>Quillcat Technology</h1>
-          </div>
+        </div>
       </header>
       <section className='section'>
 
-       <Mercadolibre></Mercadolibre> 
+         <Mercadolibre></Mercadolibre> 
       
       </section>
-      <div>
+      
       <main className='main'>
         <CartContextProvider>
           <BrowserRouter>
@@ -48,15 +48,17 @@ function App() {
 
         </CartContextProvider>
         
-        </main>
-<footer className='footer'>
-<h3>Quillcat Technology</h3>
-<p>Juramento 1544 CABA</p>
-<p>Movil: 11-58974455</p>
-<p>Quillcat@gmial.com</p>
+      </main>
+      <footer className='footer'>
+        <div className='footer2'>
+          <h3>Quillcat Technology</h3>
+          <p>Juramento 1544 CABA</p>
+          <p>Movil: 11-58974455</p>
+          <p>Quillcat@gmial.com</p>
+        </div>
 </footer>
-      </div>
-    </div>
+      
+</body>
   )
 }   
 

@@ -13,8 +13,10 @@
    
 margin-top: 200px; 
 }
-.detFont{
-    color:black;
+
+
+.detFont2{
+    color:rgb(189, 179, 179);
     font-size: 20px;
     text-shadow:  0.2em 0.2em 0.8em white;
 }

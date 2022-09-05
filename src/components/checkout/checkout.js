@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom"
 
 const Checkout =()=>{
 const [loading, setLoading]= useState(false)
-    const {cart , getquantity , finalSum, clearCart}= useContext(CartContext)
+    const {  cart , getquantity , finalSum, clearCart}= useContext(CartContext)
 const navigate= useNavigate()
 
     const totalQuantity= getquantity()
@@ -79,9 +79,9 @@ if(loading){
 
 return(
     <>
-        <h1>checkout</h1>
-        <button onClick={createOrder}>crear orden</button>
+        <h1 className="titulo2">checkout</h1>
         <Formulario/>
+        <button onClick={createOrder}>crear orden</button>
         </>
     )
 }

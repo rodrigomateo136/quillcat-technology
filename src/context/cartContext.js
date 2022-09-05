@@ -59,11 +59,18 @@ const getProductQuantity =(id) =>{
 
   return  product?.quantity
 }
+
+
+ 
+
   return (
-    <CartContext.Provider value={{cart, AddItem, getquantity, clearCart, isInCart, removeItem, getProductQuantity, finalSum  }}>
+    <CartContext.Provider value={{ cart, AddItem, getquantity, clearCart, isInCart, removeItem, getProductQuantity, finalSum  }}>
         {children}
     </CartContext.Provider>
+  
+  
   )
+
 }
 
 export default CartContext

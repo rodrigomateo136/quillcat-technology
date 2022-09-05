@@ -1,3 +1,4 @@
+
 import { useState, } from "react"
 
 
@@ -28,7 +29,7 @@ if(cargando){
 }
 return(
     <>
-<h2>Compara precios en Mercadolibre</h2>
+<h2 className="titulo2">Compara precios en Mercadolibre</h2>
 <form onSubmit={handleOnSubmit}>
     <input value={input} onChange={(e)=>setInput(e.target.value)}></input>
     <button type="submit">buscar</button>

@@ -37,7 +37,7 @@ console.log(nombre, apellido, email);
  </form>
 
 
-    <button className='buttForm' >enviar</button>
+   
  </div>
  )
 }

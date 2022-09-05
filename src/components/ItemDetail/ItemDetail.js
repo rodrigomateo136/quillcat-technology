@@ -29,8 +29,8 @@ const productQuantity = getProductQuantity(id)
         <img className="imgCelu2" src={img} alt={""} />
         <div className='cardDetalle'>
 
-        <h3 className='detFont' >El precio es ={price} </h3>
-        <h5 className='detFont' >{descripcion}</h5>
+        <h3 className='detFont2' >El precio es ={price} </h3>
+        <h5 className='detFont2' >{descripcion}</h5>
         </div>
         {
             quantity === 0 ?(

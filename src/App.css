@@ -1,60 +1,45 @@
-.App {
-  text-align: center;
-  background: rgb(16, 5, 66);
-  
-  border: 2px solid black;
-}
-.section{
-  background-image: url(../public/imagenes/fondoAbstracto.webp);
-}
-.App-logo {
-  margin-left: 20px;
-  margin-top: 20px;
-  display: flex;
-  border-radius: 25px;
-  border: 5px solid rgb(124, 58, 58);
- 
-}
-.imgLogo{
-  border-radius: 25px;
-  height: 100px;
-  width: 100px;
+html{
+  height: 100%;
 }
 
-.titulo{
-  color: burlywood;
-  box-shadow: 20px;
-  margin-left: 55px;
+body{
+  min-height: 100%;
 }
-.App-header {
+.grid-container {
+  text-align: center;
+ 
+  display:grid;
+  grid-template-areas: 
+  "header"
+  "section"
+  "main"
+  "footer";
+}
+
+
+.section{
+  grid-area: section ;
   background-image: url(../public/imagenes/fondoAbstracto.webp);
-  min-height: 30vh;
-  display: flex;
-  
-  align-items: start;
-  
-  font-size: calc(10px + 2vmin);
+}
+.header {
+  grid-area: header;
+  background-image: url(../public/imagenes/fondoAbstracto.webp);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.imgLogo{
+  border-radius: 10vw;
+  height: 10vw;
+  width: 10vw;
+  display: flex; 
+  border: 1vw solid brown;
 }
 .main{
-  display: inline;
+  grid-area: main;
+  
   background-image: url(../public/imagenes/fondoMain.jpg);
 }
 .footer{
-  display: flex;
+  grid-area: footer;
   justify-content: space-around;
   background: rgb(8, 7, 8);
   padding: 30px;
@@ -62,4 +47,11 @@
     border: 2px solid white;
     border-radius: 30px;
   margin-bottom: 28px;
+}
+.footer2{
+  display: flex;
+  justify-content: space-around;
+}
+.titulo2{
+  color:aliceblue
 }

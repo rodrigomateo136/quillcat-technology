@@ -2,8 +2,8 @@
    
     background-image: url(../../../public/imagenes/fondoMain.jpg);
    margin: 3px;
-   border-radius: 20px;
-   padding: 10px;
+   border-radius: 5vw;
+   padding: 2vw;
 }
 .navbutton{
     margin-bottom: auto;
@@ -14,11 +14,11 @@
 }
 
 .celu{
-    border: 2px solid black;
-    padding: 10px;
-    border-radius: 20px;
+    border: .3vw solid white;
+    padding: .7vw;
+    border-radius: 3vw;
     background:navajowhite;
-    margin: 20px;
+    margin: 2vw;
 
     
 }
