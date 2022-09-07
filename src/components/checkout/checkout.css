@@ -1,0 +1,13 @@
+.form{
+    background: white;
+    border: .2vw solid gray;
+    border-radius: 3vw;
+    padding: .5vw;
+    margin: 1vw;
+}
+.bt-order{
+    background: greenyellow;
+    border: .3vw solid rgb(224, 103, 103);
+    border-radius: 2vw;
+    margin: .5vw;
+}

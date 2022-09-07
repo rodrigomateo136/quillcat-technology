@@ -1,10 +1,11 @@
-import Formulario from "../form/form"
+import "./checkout.css"
 import CartContext from "../../context/cartContext"
 import { useContext, useState } from "react"
 import { baseDato } from '../../service/firebase'
-import { addDoc, collection, doc, updateDoc, getDocs, query, where , documentId , writeBatch } from "firebase/firestore"
+import { addDoc, collection, getDocs, query, where , documentId , writeBatch } from "firebase/firestore"
 //import { async } from "@firebase/util"
 import { useNavigate } from "react-router-dom"
+//import { async } from "@firebase/util"
 
 const Checkout =()=>{
 const [loading, setLoading]= useState(false)
@@ -14,20 +15,45 @@ const navigate= useNavigate()
     const totalQuantity= getquantity()
     const total=finalSum
 
+    const valorInicial ={
+        nombre:"",
+        apellido:"",
+        email:"",
+    }
+
+    const [user, setUser]=useState(valorInicial)
+
+    const capturarImputs =(e)=>{
+        const {name, value}=e.target
+        setUser({...user,[name]:value})
+    }
+    const guardarDatos=(e)=>{
+        e.preventDefault();
+        console.log(user);
+        setUser(valorInicial)
+    }
+    const comprador=user.nombre
+    const Apellido=user.apellido
+    const correo=user.email
     const createOrder = async ()=>{
+        
         setLoading(true)
 try{
     const ordenCompra ={
-        buyer:{
-        nombre: 'rodrigo',
-        apellido: 'mateo',
-        celular: '123455666',
-        direccion: 'pedrito 1234',
+        
+       buyer:{
+            
+        comprador,
+        Apellido,
+        pago:"efectivo",
+        correo,
     },
     items: cart,
     totalQuantity ,
     total,
+    
 }
+
 
 const ids= cart.map(prod => prod.id)
 
@@ -58,8 +84,8 @@ docs.forEach(doc =>{
 })
 if(fueraStock.length === 0){
     await batch.commit()
-    const orderRef = collection(baseDato, 'orders')
-    const orderAdded = await addDoc(orderRef, ordenCompra)
+    const orderRef = collection(baseDato, 'orden de Compra')
+    const orderAdded = await addDoc(orderRef, ordenCompra, capturarImputs )
     console.log(` el id de su orden es ${orderAdded.id}`)
     clearCart()
     navigate('/')
@@ -67,11 +93,12 @@ if(fueraStock.length === 0){
     console.log('estan sin stock en este momento');
 }
 } catch (error){
-    console.log(error);
+console.log(error);
 } finally {
     setLoading(false)
 }
-        
+
+
 }
 if(loading){
     return <h1>Se esta generando tu orden....</h1>
@@ -80,8 +107,20 @@ if(loading){
 return(
     <>
         <h1 className="titulo2">checkout</h1>
-        <Formulario/>
-        <button onClick={createOrder}>crear orden</button>
+    <h1 className='titulo2'>Formulario</h1>
+ <form className="boxForm" onSubmit={guardarDatos} >
+        <div>
+    <input className="form" type="text"  name="nombre" placeholder="nombre" value={user.nombre} onChange={capturarImputs} ></input>
+    </div>
+    <div>
+    <input className="form"  type="text"  name="apellido" placeholder="apellido" value={user.apellido} onChange={capturarImputs} ></input>
+    </div>
+    <div>
+    <input className="form" type="text"  name="email" placeholder="email" value={user.email} onChange={capturarImputs} ></input>
+    </div>
+    
+    </form>
+        <button className="bt-order" onClick={createOrder}>crear orden</button>
         </>
     )
 }
