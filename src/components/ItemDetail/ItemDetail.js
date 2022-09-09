@@ -1,3 +1,8 @@
+// card de detalle del producto por id, se puede ver todas las caracteristicas//
+//tienen el contador donde se puede poner la cantidad deseada de comprar//
+//y un boton que te lleva al carrito de compras//
+
+
 import './ItemDetail.css';
 import {Link} from 'react-router-dom'
 import Counter from "../counter/counter";

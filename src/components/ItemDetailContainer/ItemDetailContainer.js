@@ -1,3 +1,5 @@
+//componente del detalle del producto. que se trae de la base de datos firebase//
+
 import  './ItemDetailContainer.css';
 import {useState, useEffect } from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"

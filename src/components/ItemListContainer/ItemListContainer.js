@@ -1,3 +1,6 @@
+//listado principal de todos los productos, vienen de firebase//
+//desde la collections products//
+
 import  './ItemListContainer.css';
 import { getDocs, collection, query, where } from 'firebase/firestore';
 import {useState, useEffect} from 'react';

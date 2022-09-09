@@ -1,3 +1,5 @@
+//listado de productos //
+
 import Item from "../Item/Item";
 
 const ItemList =({productos})=>{

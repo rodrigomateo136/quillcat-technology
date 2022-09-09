@@ -1,3 +1,5 @@
+//carrito de compras del navbar, contiene la cantidad de items en el carrito se puede borrar items //
+
 import './cartwidget.css'
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'

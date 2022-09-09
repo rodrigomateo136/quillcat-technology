@@ -1,3 +1,6 @@
+//carta con el producto segun id, tienen un boton donde se puede //
+//ir al detalle del producto con el boton correspondiene//
+
 import "./Item.css";
 import {Link} from 'react-router-dom'
 

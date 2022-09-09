@@ -1,11 +1,17 @@
+//componente donde se define el formulario del comprador y los componentes del carrito,//
+//al hacer click se sube a la base de datos la compra y se descuenta el stock//
+//al final hay una funcion que suma osaca stock segun necesite el usuario para
+//usarla hay que descomentar la funcion y su import
+
+
 import "./checkout.css"
 import CartContext from "../../context/cartContext"
 import { useContext, useState } from "react"
 import { baseDato } from '../../service/firebase'
 import { addDoc, collection, getDocs, query, where , documentId , writeBatch } from "firebase/firestore"
-//import { async } from "@firebase/util"
+//import { doc, updateDoc} from "firebase/firestore"
 import { useNavigate } from "react-router-dom"
-//import { async } from "@firebase/util"
+
 
 const Checkout =()=>{
 const [loading, setLoading]= useState(false)
@@ -126,14 +132,16 @@ return(
 }
 
 export default Checkout
-//date: new date(),
 
-    // const orderRef = collection(baseDato, 'orders')
-    // addDoc( orderRef, ordenCompra).then(response =>{
-    //     console.log(response);
-    // })
+//Importante
+//con esta funcion podra sumarle o restar stock a su base de datos de firebase//
+//lo unico que debe hacer es cambiar el id del poducto Ej "S9j7BgKKMHg7PzbLi3LW" ,//
+//cambiarlo por el id del producto a cambiar y luego poner la cantidad de stock en en lugar 
+//correspondiente ej"{stock:50}"//
 
-    // const sumStock = doc(baseDato, 'products', 'S9j7BgKKMHg7PzbLi3LW')
-    // updateDoc(sumStock, {stock:50}).then(response=>{
-    //     console.log(response);
-    // })
+   
+
+    //   const sumStock = doc(baseDato, 'products', 'S9j7BgKKMHg7PzbLi3LW')
+    //   updateDoc(sumStock, {stock:50}).then(response=>{
+    //       console.log(response);
+    //   })

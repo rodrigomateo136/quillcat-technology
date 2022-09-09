@@ -1,3 +1,5 @@
+//contador de elementos a comprar este componente se encuentra en el detalle del producto//
+
 import "./counter.css"
 import { useState, useEffect } from "react";
 
