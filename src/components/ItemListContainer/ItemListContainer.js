@@ -4,7 +4,7 @@
 import  './ItemListContainer.css';
 import { getDocs, collection, query, where } from 'firebase/firestore';
 import {useState, useEffect} from 'react';
-//import {getProducts, getProductsByCategory} from '../../asyncMock';
+
 import ItemList from '../ItemList/ItemList';
 import {useParams} from 'react-router-dom'
 import { baseDato } from '../../service/firebase';
@@ -37,13 +37,7 @@ const ItemListContainer =({greeting}) =>{
         })
 
 
-        //const AsyncFuntion = categoryId ? getProductsByCategory : getProducts
-        // AsyncFuntion(categoryId).then(products =>{
-        //     setProducts(products)
-        // }).catch(error =>{
-        //     console.log(error)
-        // })
-        
+      
     }, [categoryId])
     if(loading) {
         return <h1>cargando....</h1>

@@ -1,5 +1,5 @@
 //carrito de compras , componente donde se encuentra la compra a realizar//
-
+import "./cart.css"
 import { useContext } from 'react'
 import CartContext from '../context/cartContext'
 import { Link } from 'react-router-dom'

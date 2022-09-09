@@ -1,4 +1,5 @@
 .carrito{
+    display: flex;
     height: 65px;
     width: 65px;
     background: white;
@@ -24,4 +25,8 @@
     height: 30px;
     width: 30px;
     border-radius: 15px;
+}
+.limpiador{
+border-radius: 4vw;
+
 }
